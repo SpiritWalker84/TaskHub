@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Facade;
-
 return [
     'name' => env('APP_NAME', 'TaskHub'),
     'env' => env('APP_ENV', 'production'),
@@ -17,11 +15,4 @@ return [
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
     ],
-
-    'providers' => [
-        App\Providers\AppServiceProvider::class,
-        App\Providers\ModuleServiceProvider::class,
-    ],
-
-    'aliases' => Facade::defaultAliases()->merge([])->toArray(),
 ];
