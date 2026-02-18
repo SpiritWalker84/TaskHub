@@ -18,8 +18,6 @@ RUN docker-php-ext-install \
     opcache \
     bcmath
 
-COPY .docker/php-fpm-www.conf /usr/local/etc/php-fpm.d/zz-docker.conf
-
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
