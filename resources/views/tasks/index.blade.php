@@ -13,7 +13,7 @@
             <li class="task-item">
                 <a href="{{ route('tasks.show', $task) }}">{{ $task->title }}</a>
                 <div class="task-meta">
-                    <span class="task-status {{ $task->status }}">{{ __('task.status.' . $task->status, ['new' => 'Новая', 'in_progress' => 'В работе', 'done' => 'Выполнена'][$task->status] ?? $task->status) }}</span>
+                    <span class="task-status {{ $task->status }}">{{ ['new' => 'Новая', 'in_progress' => 'В работе', 'done' => 'Выполнена'][$task->status] ?? $task->status }}</span>
                     @if($task->assignee) • Исполнитель: {{ $task->assignee->name }} @endif
                     @if($task->due_date) • Срок: {{ $task->due_date->format('d.m.Y') }} @endif
                 </div>
